@@ -1,0 +1,9 @@
+v: 0
+micros:
+  - name: express-sequelize
+    src: ./
+    engine: nodejs16
+    primary: true
+    public_routes:
+      - "/**"
+    run: node index.js

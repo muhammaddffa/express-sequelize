@@ -11,7 +11,7 @@ const db = new Sequelize(
     dialect: "mysql",
     dialectOptions: {
       ssl: {
-        ca: fs.readFileSync("/home/daffa/Downloads/isrgrootx1.pem"),
+        ca: fs.readFileSync("isrgrootx1.pem"),
       },
     },
   }
