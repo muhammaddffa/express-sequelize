@@ -2,6 +2,9 @@ import express from "express";
 import SiswaRoute from "./routes/SiswaRoute.js";
 import authRoute from "./routes/authRoute.js";
 import UserRoute from "./routes/UserRoute.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());

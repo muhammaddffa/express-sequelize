@@ -1,4 +1,4 @@
-import { STRING, Sequelize, UUID } from "sequelize";
+import {Sequelize } from "sequelize";
 import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
@@ -12,13 +12,11 @@ const User = db.define(
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    nis: {
-      type: DataTypes.INTEGER,
+    nama: DataTypes.STRING,
+    nis: DataTypes.INTEGER,
+    status: {
+      type: DataTypes.ENUM("Lulus", "Tidak Lulus"),
       allowNull: false,
-      validate: {
-        notEmpty: true,
-        len: [3, 100],
-      },
     },
     password: {
       type: DataTypes.STRING,
@@ -35,4 +33,3 @@ export default User;
 (async () => {
   await db.sync();
 })();
-
