@@ -23,6 +23,10 @@ app.get("/test", async (req, res) => {
   res.send({ message: "Test endpoint" });
 });
 
+app.get("/hello", async (req, res) => {
+  res.send({ message: "Hello world" });
+});
+
 app.listen(8080, () => {
   console.log("Server up and running.....");
 });
