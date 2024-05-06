@@ -18,7 +18,12 @@ app.use(authRoute);
 app.get("/", async (req, res) => {
   res.send({ message: "Awesome it works 🐻" });
 });
-app.listen(8080 , () => {
+
+app.get("/test", async (req, res) => {
+  res.send({ message: "Test endpoint" });
+});
+
+app.listen(8080, () => {
   console.log("Server up and running.....");
 });
 
