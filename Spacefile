@@ -1,4 +1,4 @@
-earv: 0
+v: 0
 micros:
   - name: express-sequelize
     src: ./
